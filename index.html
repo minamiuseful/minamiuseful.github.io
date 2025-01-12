@@ -1,5 +1,141 @@
 <!DOCTYPE html>
-<head></head>
-<body>
-  <h1>hello world!</h1>
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link  rel="stylesheet" href="./style.css">
+    <title>Parts center</title>
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Welcome to parts center</h1>
+    <!-- menu contents -->
+     <div class="pub-menu">
+      <div class="pub-menu-hambergar">
+        <button class="pub-menu-hambergar__input" onclick="hambergar()">
+         <i class="fas fa-bars"></i>
+        </button>
+        <div class="pub-menu-side pub-menu-side__checked">
+          <ul>
+            <li><a href="">pageA</a></li>
+            <li><a href="">pageB</a></li>
+            <li><a href="">pageC</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pub-menu-bar">
+      </div>
+     </div>
+
+    <!-- tab contents -->
+     <div class="pub-tab">
+      <!-- tab content A -->
+      <input type="radio" id="tabA" name="tab-content" checked="checked">
+      <label for="tabA">tabA</label>
+      <div>this is tabA content.</div>
+      <!-- tab content B -->
+      <input type="radio" id="tabB" name="tab-content">
+      <label for="tabB">tabB</label>
+      <div>this is tabB content.</div>
+      <!-- tab content C -->
+      <input type="radio" id="tabC" name="tab-content">
+      <label for="tabC">tabC</label>
+      <div>this is tabC content.</div>
+     </div>
+
+    <!-- dummy -->
+     <div style="display:flex; justify-content: center; margin-top:20px;">
+      <button class="pub-button__red">PUSH HERE</button>
+    </div>
+
+    <!-- accordion contents with js-->
+    <div class="pub-accordion">
+      <button class="pub-accordion-button" onclick="accordionEvent()">
+        Click here for detailed infomation
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="pub-accordion-content">
+        <div>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+        </div>
+      </div>
+    </div>
+    <!-- accordion contents without js-->
+    <div class="pub-accordion2">
+      <input type="checkbox" id="pub-accordion2-input">
+      <label for="pub-accordion2-input">
+        Click here for detailed infomation
+        <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="pub-accordion2-content">
+        <div style="padding: 15px;">
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+          <p>this is accordion contents.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- modal content -->
+     <button class="pub-modal-button" onclick="modalEvent()">
+      Open detailed infomation
+      <i class="fas fa-expand-alt"></i>
+     </button>
+     <div class="pub-modal-content">
+      <p>this is modal content.</p>
+      <p>this is modal content.</p>
+      <p>this is modal content.</p>
+      <p>this is modal content.</p>
+      <p>this is modal content.</p>
+     </div>
+     <div class="pub-modal-content-back" onclick="modalCloseEvent()"></div>
+
+    <!-- carousel content -->
+     <div class="pub-carousel">
+      <button class="pub-carousel-button" onclick="carouselEventleft()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="pub-carousel-contents">
+        <div class="pub-carousel-innercontent pub-carousel__block" id="A">
+          <img src="./img/img_1.png" alt="carouselA">
+          <p>crouselA</p>
+        </div>
+        <div class="pub-carousel-innercontent pub-carousel__center" id="B"> 
+          <img src="./img/img_1.png" alt="carouselB">
+          <p>crouselB</p>
+        </div>
+        <div class="pub-carousel-innercontent pub-carousel__block" id="C">
+          <img src="./img/img_1.png" alt="carouselC">
+          <p>crouselC</p>
+        </div>
+        <!-- <div class="pub-carousel-innercontent" id="D">
+          <img src="./img/img_1.png" alt="carouselD">
+          <p>crouselD</p>
+        </div>
+        <div class="pub-carousel-innercontent" id="E">
+          <img src="./img/img_1.png" alt="carouselE">
+          <p>crouselE</p>
+        </div> -->
+      </div>
+      <button class="pub-carousel-button" onclick="carouselEventRight()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+     </div>
+    <!-- dummy -->
+     <div>
+      <p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p><p>dummy text.</p>
+     </div>
+   
+    <!-- floatind contents -->
+     <div class="pub-floating hidden">
+      <button class="pub-button__red">PUSH HERE</button>
+     </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
