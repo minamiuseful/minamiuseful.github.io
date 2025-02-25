@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <i class="fas fa-bars menu-bar"></i>
+            <div class="side-menu side-menu__hidden">
+                <ul>
+                    <li><a href="#enter">ENTER<br><span>-タスクの入力-</span></a></li>
+                    <li><a href="#todo">TODO<br><span>-タスク-</span></a></li>
+                    <li><a href="#done">DONE<br><span>-終了したタスク-</span></a></li>
+                    <li><a href="#howto">HOW TO USE<br><span>-使い方-</span></a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="enter" id="enter">
+                <div class="enter-content">
+                    <input class="enter-content-input" type="text" placeholder="タスクを入力してください">
+                    <a href="#todo">
+                      <button class="enter-content-button"><i class="fas fa-plus"></i></button>
+                    </a>
+                </div>
+            </div>
+            <div class="todo" id="todo">
+                <h2>TODO</h2>
+                <div class="task0 task0__todo">
+                    <p>タスクを追加してください</p>
+                </div>
+            </div>
+            <div class="done" id="done">
+                <h2>DONE</h2>
+                <div class="task0 task0__done">
+                    <p>タスクを完了してください</p>
+                </div>
+            </div>
+            <div class="howto" id="howto">
+                <h2>HOW TO USE</h2>
+            </div>
+            <template>
+                <div class="todo-content">
+                    <div class="todo-content-header">
+                        <div class="todo-content-header__checkbox"><i class="fas fa-check"></i></div>
+                        <input type="text" class="todo-content-header__input"></input>
+                        <div class="todo-content-header__trash"><i class="far fa-trash-alt"></i></div>
+                        <div class="todo-content-header__edit"><i class="far fa-edit"></i></div>
+                    </div>
+                    <div class="todo-content-body">
+                        <div class="todo-content-body__date">
+                            <label><i class="far fa-calendar-check"></i>日付</label><br>
+                            <input type="date" value="2025-02-12">
+                        </div>
+                        <div class="todo-content-body__memo">
+                            <label><i class="fas fa-pencil-alt"></i>メモ</label><br>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </main>
+        <footer>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
