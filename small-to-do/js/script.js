@@ -41,10 +41,23 @@ function enter(){
    }
 };
 function trash(trashbox){
+   const todoContentTrash = trashbox.closest(".todo-content");
+   const mordalWrap = todoContentTrash.querySelector(".mordal-wrap");
    trashbox.addEventListener("click",function(){
-      const todoContentTrash = trashbox.closest(".todo-content");
+      mordalWrap.classList.remove("mordal__hidden");
+   });
+   const trashButton = todoContentTrash.querySelector(".mordal-button:first-of-type");
+   trashButton.addEventListener("click",function(){
       todoContentTrash.remove();
       task0();
+   });
+   const cancelButton = todoContentTrash.querySelector(".mordal-button:last-of-type");
+   cancelButton.addEventListener("click",function(){
+      mordalWrap.classList.add("mordal__hidden");
+  });
+   const closeButton = todoContentTrash.querySelector(".mordal-content-close");
+   closeButton.addEventListener("click",function(){
+       mordalWrap.classList.add("mordal__hidden");
    });
 }
 function edit(editbox){
@@ -98,6 +111,11 @@ menuBar.addEventListener("click",function(){
    if(sideMenu.classList.contains("side-menu__hidden")){
       sideMenu.classList.remove("side-menu__hidden");
    }else{
+      sideMenu.classList.add("side-menu__hidden");
+   }
+});
+window.addEventListener("click",function(event){
+   if(event.target != menuBar && event.target != sideMenu){
       sideMenu.classList.add("side-menu__hidden");
    }
 });

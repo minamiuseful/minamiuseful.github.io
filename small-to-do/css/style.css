@@ -204,3 +204,130 @@ todo-content-body__memo{
 .side-menu__hidden{
     transform: translate(-500px,0);
 }
+.mordal-wrap{
+    position:fixed;
+    background-color:rgba(0,0,0,0.5);
+    top:0; left:0; bottom:0; right:0; z-index:1002;
+}
+.mordal-content{
+    width: 400px;
+    height:200px;
+    background-color:#ffffff;
+    margin:300px auto;
+    border-radius: 3px;
+    padding:60px 0 20px;
+    position: relative;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2);
+}
+.mordal-button{
+    width:100px;
+    height:25px;
+    border:1px solid #e3e3e3;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2);
+    border-radius:3px;
+    text-align:center;
+    cursor: pointer;
+}
+.mordal-button:hover{
+    background-color: #f8f8f8;
+}
+.mordal-button:first-of-type{
+    margin-right: 10px;
+}
+.mordal-content p{
+    text-align: center;
+}
+.mordal-content-inner{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.mordal-content-close{
+    font-size: 24px;
+    width: 30px;
+    height:30px;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.mordal__hidden{
+    display: none;
+}
+.howto-number{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+.howto-title{
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.howto-ditail{
+    margin-left:25px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.howto-content{
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 10px 10px -15px rgba(0, 0, 0, 0.1);
+    padding:40px 20px 20px;
+    margin-bottom:30px;
+}
+.howto-wrap{
+    width: 700px;
+    margin:0 auto;
+}
+.howto-ditail img{
+    margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .enter,
+  .todo,
+  .done,
+  .howto {
+    min-width: 0px;
+    min-height: 400px;
+  }
+  .todo-content{
+    width: 90%;
+  }
+  .side-menu,
+  .side-menu a,
+  .mordal-content,
+  .howto-wrap {
+    width: 100%;
+  }
+  .mordal-wrap{
+    padding:0 25px;
+  }
+  .howto-wrap{
+    padding:0 10px;
+  }
+  header i{
+    margin:30px 15px 0;
+  }
+  .enter-content{
+    width: 100%;
+    margin: 0 10px;
+  }
+  .enter-content__scroll{
+    width: calc(100% - 70px);
+    left:50px;
+  }
+  .side-menu__hidden{
+    display: none;
+  }
+}
