@@ -29,17 +29,6 @@ header i{
 .done{
     background-color: #e3e3e3;
 }
-.enter-content__scroll{
-    position:fixed;
-    top:20px;
-    z-index: 1001;
-}
-.enter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top:0;
-}
 .enter-content{
     background-color: #e3e3e3;
     width:800px;
@@ -47,6 +36,19 @@ header i{
     border-radius: 25px;
     padding:10px 10px 10px 20px;
     display: flex;
+    transform: translateY(90px);
+}
+.enter-content__scroll{
+    position:fixed;
+    top:20px;
+    z-index: 1001;
+    transform: translateY(0);
+}
+.enter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:0;
 }
 .enter-content-input{
     background: none;
@@ -293,6 +295,10 @@ todo-content-body__memo{
 .howto-ditail img{
     margin-top: 10px;
 }
+.howto-carousel-button,
+.howto-carousel-dotswrap{
+    display: none;
+}
 @media screen and (max-width: 768px) {
   .enter,
   .todo,
@@ -315,6 +321,32 @@ todo-content-body__memo{
   }
   .howto-wrap{
     padding:0 10px;
+    display: flex;
+    align-items: center;
+  }
+  .howto-carousel-button{
+    display: block;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    flex-shrink:0;
+  }
+  .howto-outer{
+    margin: 0 12px;
+    overflow: hidden;
+  }
+  .howto-inner{
+    width:400%;
+    display: flex;
+  }
+  .howto-content{
+    width: 100%;
+  }
+  .howto-carousel-button:hover{
+    background-color: #bfbfbf;
   }
   header i{
     margin:30px 15px 0;
@@ -330,4 +362,19 @@ todo-content-body__memo{
   .side-menu__hidden{
     display: none;
   }
+  .howto-carousel-dotswrap{
+    width:70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+ .howto-carousel-dot{
+    width: 10px;
+    height: 10px;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+ }
+ .howto-carousel-dot__click{
+    background-color: #bfbfbf;
+ }
 }

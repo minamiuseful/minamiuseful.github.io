@@ -38,6 +38,8 @@ function enter(){
       edit(editbox);
       document.querySelector(".enter-content-input").value = "";
       task0();
+      const inputDate = newTodoContent.querySelector(".input-date");
+      inputDate.value = ymd;
    }
 };
 function trash(trashbox){
@@ -119,3 +121,66 @@ window.addEventListener("click",function(event){
       sideMenu.classList.add("side-menu__hidden");
    }
 });
+
+const howtoCarouselButton = document.getElementsByClassName("howto-carousel-button");
+const howtoInner = document.querySelector(".howto-inner");
+const howtoDots = document.getElementsByClassName("howto-carousel-dot");
+howtoCarouselButton[0].addEventListener("click",carouselRight);
+howtoCarouselButton[1].addEventListener("click",carouselLeft);
+var cnt = 0;
+
+function carouselLeft(){
+   if(cnt < 3){
+     cnt += 1;
+     howtoInner.style.transform = "translateX(-"+ (cnt*25) +"%)"
+     howtoDots[cnt-1].classList.remove("howto-carousel-dot__click");
+     howtoDots[cnt].classList.add("howto-carousel-dot__click");
+   }
+}
+function carouselRight(){
+   if(cnt > 0){
+      cnt -= 1;
+     howtoInner.style.transform = "translateX(-"+ (cnt*25) +"%)"
+     howtoDots[cnt+1].classList.remove("howto-carousel-dot__click");
+     howtoDots[cnt].classList.add("howto-carousel-dot__click");
+   }
+}
+
+for(let i=0; i<=3; i++){
+   howtoDots[i].addEventListener("click",function(){
+      cnt = i;
+      howtoInner.style.transform = "translateX(-"+ (cnt*25) +"%)"
+      for(j=0; j<=3; j++){
+         if(howtoDots[j].classList.contains("howto-carousel-dot__click")){
+            howtoDots[j].classList.remove("howto-carousel-dot__click");
+         }
+      }
+      howtoDots[cnt].classList.add("howto-carousel-dot__click");
+   });
+}
+
+window.addEventListener("resize",function(){
+   if(this.window.innerWidth >= 768){
+      howtoInner.style.transform = "translateX(0)"
+   }
+})
+
+
+   //今日の日時を表示
+   var date = new Date()
+   var year = date.getFullYear()
+   var month = date.getMonth() + 1
+   var day = date.getDate()
+ 
+   var toTwoDigits = function (num, digit) {
+     num += ''
+     if (num.length < digit) {
+       num = '0' + num
+     }
+     return num
+   }
+   
+   var yyyy = toTwoDigits(year, 4)
+   var mm = toTwoDigits(month, 2)
+   var dd = toTwoDigits(day, 2)
+   var ymd = yyyy + "-" + mm + "-" + dd;

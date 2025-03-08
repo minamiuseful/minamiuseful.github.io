@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reset.css?20250308">
+        <link rel="stylesheet" href="./css/style.css?20250308">
         <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
     </head>
@@ -42,53 +42,62 @@
             </div>
             <div class="howto" id="howto">
                 <h2>HOW TO USE</h2>
-                <ul class="howto-wrap">
-                    <li class="howto-content">
-                        <p class="howto-title"><span class="howto-number">1</span>タスクの追加</p>
-                        <p class="howto-ditail">
-                            灰色のエリアにタスクを入力したら、「<span class="howto-plus">＋</span>」ボタンをタップしてタスクを追加します。
-                            <img src="./img/img_howto_pc_1.png">
-
-                        </p>
-                        <p class="howto-ditail">
-                            追加したタスクは、「TODO」エリアに表示されます。
-                            <img src="./img/img_howto_pc_2.png">
-                        </p>
-                    </li>
-                    <li>
-                    <li class="howto-content">
-                        <p class="howto-title"><span class="howto-number">2</span>タスクの編集</p>
-                        <p class="howto-ditail">
-                            「<i class="far fa-edit"></i>」ボタンを押下し、タスクの詳細入力エリアを表示します。
-                            <img src="./img/img_howto_pc_3.png">
-                        </p>
-                        <p class="howto-ditail">
-                            「日付」→タスクの締め切り日を追加。「メモ」→タスクに関するメモを追加。
-                            <img src="./img/img_howto_pc_4.png">
-                        </p>
-                    </li>
-                    <li class="howto-content">
-                        <p class="howto-title"><span class="howto-number">3</span>タスクの削除</p>
-                        <p class="howto-ditail">
-                            「<i class="far fa-trash-alt"></i>」ボタンを押下し、削除画面を表示します。
-                            <img src="./img/img_howto_pc_5.png">
-                        </p>
-                        <p class="howto-ditail">
-                            「削除」を選択することでタスクを削除できます。
-                            <img src="./img/img_howto_pc_6.png">
-                        </p>
-                    </li>
-                    <li class="howto-content">
-                        <p class="howto-title"><span class="howto-number">4</span>タスクの完了</p>
-                        <p class="howto-ditail">
-                            タスクが完了したらタスクのチェックエリアをクリックします。
-                            <img src="./img/img_howto_pc_7.png">
-                        </p>
-                        <p class="howto-ditail">
-                            完了したタスクは「DONE」エリアに表示されます。
-                            <img src="./img/img_howto_pc_8.png">
-                        </p>
-                    </li>
+                <div class="howto-wrap">
+                    <button class="howto-carousel-button"><i class="fas fa-chevron-left"></i></button>
+                    <div class="howto-outer" >
+                        <ul class="howto-inner">
+                            <li class="howto-content">
+                                <p class="howto-title"><span class="howto-number">1</span>タスクの追加</p>
+                                <p class="howto-ditail">
+                                    灰色のエリアにタスクを入力したら、「<span class="howto-plus">＋</span>」ボタンをタップしてタスクを追加します。
+                                    <img src="./img/img_howto_pc_1.png">
+        
+                                </p>
+                                <p class="howto-ditail">
+                                    追加したタスクは、「TODO」エリアに表示されます。
+                                    <img src="./img/img_howto_pc_2.png">
+                                </p>
+                            </li>
+                            <li>
+                            <li class="howto-content">
+                                <p class="howto-title"><span class="howto-number">2</span>タスクの編集</p>
+                                <p class="howto-ditail">
+                                    「<i class="far fa-edit"></i>」ボタンを押下し、タスクの詳細入力エリアを表示します。
+                                    <img src="./img/img_howto_pc_3.png">
+                                </p>
+                                <p class="howto-ditail">
+                                    「日付」→タスクの締め切り日を追加。「メモ」→タスクに関するメモを追加。
+                                    <img src="./img/img_howto_pc_4.png">
+                                </p>
+                            </li>
+                            <li class="howto-content">
+                                <p class="howto-title"><span class="howto-number">3</span>タスクの削除</p>
+                                <p class="howto-ditail">
+                                    「<i class="far fa-trash-alt"></i>」ボタンを押下し、削除画面を表示します。
+                                    <img src="./img/img_howto_pc_5.png">
+                                </p>
+                                <p class="howto-ditail">
+                                    「削除」を選択することでタスクを削除できます。
+                                    <img src="./img/img_howto_pc_6.png">
+                                </p>
+                            </li>
+                            <li class="howto-content">
+                                <p class="howto-title"><span class="howto-number">4</span>タスクの完了</p>
+                                <p class="howto-ditail">
+                                    タスクが完了したらタスクのチェックエリアをクリックします。
+                                    <img src="./img/img_howto_pc_7.png">
+                                </p>
+                                <p class="howto-ditail">
+                                    完了したタスクは「DONE」エリアに表示されます。
+                                    <img src="./img/img_howto_pc_8.png">
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="howto-carousel-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <ul class="howto-carousel-dotswrap">
+                    <li class="howto-carousel-dot howto-carousel-dot__click"></li><li class="howto-carousel-dot"></li><li class="howto-carousel-dot"></li><li class="howto-carousel-dot"></li>
                 </ul>
             </div>
             <template>
@@ -112,7 +121,7 @@
                     <div class="todo-content-body">
                         <div class="todo-content-body__date">
                             <label><i class="far fa-calendar-check"></i>日付</label><br>
-                            <input type="date" value="2025-02-12">
+                            <input class="input-date" type="date" value="2025-02-12">
                         </div>
                         <div class="todo-content-body__memo">
                             <label><i class="fas fa-pencil-alt"></i>メモ</label><br>
